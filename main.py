@@ -1,9 +1,11 @@
 from config.spark_config import init_spark
 from data.sample_data import create_sample_data
-from logic.joins import get_product_category_pairs, get_products_without_categories
+from logic.joins import (get_product_category_pairs,
+                         get_products_without_categories)
 from utils.logger import get_logger
 
 logger = get_logger(__name__)
+
 
 def main() -> None:
     spark = init_spark()
@@ -21,6 +23,7 @@ def main() -> None:
 
     spark.stop()
     logger.info("Spark остановлен. Программа завершена.")
+
 
 if __name__ == "__main__":
     main()

@@ -1,7 +1,9 @@
 from pyspark.sql import SparkSession
+
 from utils.logger import get_logger
 
 logger = get_logger(__name__)
+
 
 def init_spark(app_name: str = "ProductCategoryApp") -> SparkSession:
     logger.info("Инициализация SparkSession...")
